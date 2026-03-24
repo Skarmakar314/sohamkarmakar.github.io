@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Soham Karmakar Research</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+
+body
+{
+margin:0;
+font-family:Roboto, sans-serif;
+color:white;
+background-image:url("1000_F_92802581_jLzSnLkrRB2LrqBClPY7B5DU5WHn9khi.jpg");
+background-size:cover;
+background-attachment:fixed;
+scroll-behavior:smooth;
+}
+
+
+
+.bg
+{
+height:100vh;
+background-size:cover;
+background-position:center;
+position:relative;
+}
+
+.overlay
+{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.65);
+}
+
+
+
+.topbar
+{
+position:absolute;
+top:0;
+width:100%;
+height:60px;
+background:rgba(0,0,0,0.6);
+z-index:2;
+}
+
+.menu
+{
+font-size:30px;
+padding:10px 20px;
+cursor:pointer;
+}
+
+
+
+.sidebar
+{
+height:100vh;
+width:0;
+position:fixed;
+top:0;
+left:0;
+background:rgba(0,0,0,0.95);
+overflow-x:hidden;
+transition:0.4s;
+padding-top:60px;
+z-index:5;
+backdrop-filter:blur(5px);
+}
+
+.sidebar a
+{
+padding:10px 20px;
+display:block;
+color:white;
+text-decoration:none;
+font-size:20px;
+}
+
+.sidebar a:hover
+{
+background:#333;
+}
+
+.close
+{
+position:absolute;
+top:10px;
+right:20px;
+font-size:30px;
+cursor:pointer;
+}
+
+
+
+.main
+{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+z-index:2;
+}
+
+
+
+.pic
+{
+width:150px;
+height:150px;
+border-radius:50%;
+border:4px solid white;
+background:url("profile.jpeg");
+background-size:cover;
+background-position:center;
+margin:auto;
+box-shadow:0 0 20px rgba(255,255,255,0.5);
+}
+
+
+
+h1
+{
+font-family:'Playfair Display', serif;
+font-size:55px;
+margin:10px;
+letter-spacing:2px;
+text-shadow:0 0 10px rgba(255,255,255,0.4);
+}
+
+h2
+{
+font-family:'Playfair Display', serif;
+letter-spacing:1px;
+font-size:32px;
+margin-bottom:20px;
+}
+
+
+.section
+{
+background:linear-gradient(
+to bottom,
+rgba(0,0,0,0.45),
+rgba(0,0,0,0.45)
+);
+padding:60px;
+text-align:center;
+backdrop-filter:blur(3px);
+}
+
+.section2
+{
+background:linear-gradient(
+to bottom,
+rgba(0,0,0,0.45),
+rgba(0,0,0,0.75)
+);
+padding:60px;
+text-align:center;
+backdrop-filter:blur(3px);
+}
+
+.section3
+{
+background:linear-gradient(
+to bottom,
+rgba(0,0,0,0.75),
+rgba(0,0,0,0.45)
+);
+padding:60px;
+text-align:center;
+backdrop-filter:blur(3px);
+}
+
+.section p
+{
+max-width:900px;
+margin:auto;
+text-align:justify;
+line-height:1.7;
+font-size:18px;
+}
+
+
+
+.link
+{
+display:block;
+background:rgba(30,30,30,0.8);
+margin:12px auto;
+padding:15px;
+max-width:700px;
+text-decoration:none;
+color:white;
+border-radius:8px;
+font-size:18px;
+transition:0.3s;
+border:1px solid rgba(255,255,255,0.2);
+}
+
+.link:hover
+{
+background:rgba(80,80,80,0.8);
+transform:scale(1.03);
+}
+
+
+
+.footer
+{
+background:black;
+text-align:center;
+padding:20px;
+}
+
+.aboutsec
+{
+background:linear-gradient(
+rgba(0,0,0,0.75),
+rgba(0,0,0,0.75)
+);
+padding:60px;
+text-align:center;
+backdrop-filter:blur(4px);
+}
+
+.hide
+{
+opacity:0;
+transform:translateY(50px);
+transition:1s;
+}
+
+.show
+{
+opacity:1;
+transform:translateY(0);
+}
+
+.eduBox
+{
+max-width:800px;
+margin:20px auto;
+background:rgba(0,0,0,0.6);
+padding:25px;
+border-radius:10px;
+text-align:left;
+box-shadow:0 0 15px rgba(0,0,0,0.6);
+backdrop-filter:blur(5px);
+}
+
+.eduBox a
+{
+color:#4da6ff;
+text-decoration:none;
+font-weight:bold;
+}
+
+.eduBox a:hover
+{
+text-decoration:underline;
+}
+
+a
+{
+color:white;
+text-decoration:none;
+}
+
+a:hover
+{
+color:#cccccc;
+}
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<div class="sidebar" id="side">
+
+<span class="close" onclick="closebar()">×</span>
+
+<a href="#">Home</a>
+<a href="#about">About</a>
+<a href="#education">Currently Pursuing</a>
+<a href="#research">Ongoing Research Fields</a>
+<a href="#cv">My CV</a>
+<a href="#contact">Contact</a>
+
+</div>
+
+
+
+<div class="bg">
+
+<div class="overlay"></div>
+
+<div class="topbar">
+<span class="menu" onclick="openbar()">☰</span>
+</div>
+
+
+
+<div class="main">
+
+<div class="pic"></div>
+
+<h1>Soham Karmakar</h1>
+
+<p>
+Applied Mathematics | Computer Science | Music | Philosophy | Psychology | Research
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="aboutsec" id="about">
+
+<h2>About Me</h2>
+
+<p class="hide" id="abouttext">
+
+I am an independent researcher with an inquisitive mind, fascinated by the subject matters of mathematics, computer science, and the unseen links between different forms of knowledge. My research focuses on patterns in prime numbers, theoretical systems, and the prospect that music, logic, and nature are all governed by some underlying principles of mathematics. I find myself fascinated by the prospect of learning how complex concepts may be built upon simple principles, and how abstract concepts may appear in the world around us.
+
+Along with research, I have a strong passion for Indian classical music, portrait sketching, and photography. I think these activities train the mind to observe and find beauty in details, balance, and expression. Be it music, the human face, or mathematical formulas, I find beauty in all these forms. I think beauty is not just limited to the realm of art; it is in numbers, patterns, nature, and life itself.
+
+I am also interested in the philosophy and psychology of man, particularly in the notion that thoughts, emotions, and behaviors may be governed by mathematical principles. The exploration of the human mind in terms of logic, symmetry, and patterns is perhaps one of the most intriguing research problems to me, as it links the realm of science with the realm of experience, reason with the realm of imagination.
+
+Research, to me, is not just a profession but a journey, and I would like to continue this journey of study, thinking, and discovery throughout my life. The more one delves deeper into research, the more it feels like entering a fractal, where each answer leads to another, each layer leads to another layer, and so on, with no end in sight. In this journey, perhaps the researcher becomes disconnected from the world outside, not because he is disconnected from it, but because he is now infinitely connected to the world inside.
+
+Perhaps this is the beauty of knowledge: the more one knows, the more he realizes that there is no end to what he may find, no last discovery to be made, just an endless journey waiting to be traversed.
+
+</p>
+
+</div>
+
+
+<div class="section3" id="education">
+
+<h2>Currently Pursuing</h2>
+
+<div class="eduBox">
+
+<p><b>Current Degree (1):</b> B.Sc. in Computer Science (Honours)</p>
+
+<p><b>College:</b> 
+<a href="https://rkmrc.in/" target="_blank">
+Ramakrishna Mission Residential College, Narendrapur (Autonomous)
+</a>
+</p>
+
+<p><b>University:</b> Affiliated by Calcutta University</p>
+
+<p><b>Current Year:</b> 2nd Year</p>
+
+<p><b>Current Degree (2):</b> B.Music in Indian Classical Music (Instrumental)</p>
+
+<p><b>College:</b> 
+<a href="https://pracheenkalakendra.org/" target="_blank">
+Prachin Kala Kendra (Chandigarh)
+</a>
+</p>
+
+<p><b>Current Year:</b> 2nd Year</p>
+
+<p>
+I am currently pursuing my undergraduate studies while continuing my independent research in applied mathematics, computer science, music theory, philosophy, psychology and theoretical structures.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="section" id="cv">
+
+<h2>My CV</h2>
+
+<a class="link"
+href="https://drive.google.com/file/d/15JwdQuQ_jAga0VtbHp3H-6gF9m7kmfmm/view?usp=drive_link"
+target="_blank">
+
+Curriculum Vitae (PDF)
+
+</a>
+
+</div>
+
+<div class="section" id="research">
+
+<h2>Ongoing Research Fields</h2>
+
+<a class="link"
+href="https://drive.google.com/file/d/1gXD8iNQf1yNMjxrIeRZqJ8qhzpjpXQd6/view"
+target="_blank">
+
+Music and Prime Numbers (PDF)
+
+</a>
+
+</div>
+
+
+
+<div class="section2" id="contact">
+
+<h2>Contact</h2>
+
+<p>Email: karmakarsohampi@gmail.com</p>
+<p>Phone: +91-9903731681</p>
+<p>
+Instagram (Art account):
+<a href="https://instagram.com/skarmakar314" target="_blank">
+@skarmakar314
+</a>
+</p>
+
+<p>
+Instagram (Main account):
+<a href="https://instagram.com/turing_in_pain" target="_blank">
+@turing_in_pain
+</a>
+</p>
+
+</div>
+
+
+
+<div class="footer">
+
+Copyright © 2026 Soham Karmakar  
+All rights reserved
+
+</div>
+
+
+
+<script>
+
+function openbar()
+{
+document.getElementById("side").style.width="250px";
+}
+
+function closebar()
+{
+document.getElementById("side").style.width="0";
+}
+
+
+
+window.addEventListener("scroll", function()
+{
+var t = document.getElementById("abouttext");
+
+if(!t) return;
+
+var pos = t.getBoundingClientRect().top;
+
+var screen = window.innerHeight;
+
+if(pos < screen - 100)
+{
+t.classList.add("show");
+}
+
+});
+
+</script>
+
+
+
+</body>
+</html>
